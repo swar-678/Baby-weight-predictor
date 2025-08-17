@@ -5,14 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Baby Weight Predictor</title>
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
         body {
             font-family: Arial, sans-serif;
             background: linear-gradient(to right, #74ebd5, #ACB6E5);
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
             margin: 0;
+            padding: 20px; /* extra padding to avoid top clipping */
         }
 
         .form-container {
@@ -20,13 +25,17 @@
             padding: 30px 40px;
             border-radius: 15px;
             box-shadow: 0px 8px 20px rgba(0,0,0,0.2);
-            width: 350px;
+            width: 100%;
+            max-width: 400px; /* slightly wider */
             text-align: center;
+            overflow: auto; /* scroll if screen is small */
         }
 
         h1 {
+            margin-top: 0;
             margin-bottom: 20px;
             color: #333;
+            font-size: 22px;
         }
 
         label {
@@ -67,6 +76,18 @@
         button:hover {
             background: linear-gradient(to right, #57c6e1, #8e9efc);
         }
+
+        h3 {
+            margin-top: 15px;
+            color: #333;
+        }
+
+        @media (max-height: 600px) {
+            body {
+                align-items: flex-start;
+                padding-top: 20px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -85,13 +106,13 @@
             <label>Height in inch</label>
             <input name="height" type="number">
 
-            <label>Weight in kg </label>
+            <label>Weight in kg</label>
             <input name="weight" type="number">
 
             <label>Smoking (1=Yes, 0=No)</label>
             <input name="smoke" type="number">
 
-            <button type="submit">Predict Weight</button><br>
+            <button type="submit">Predict Weight</button>
             
             <h3> Your Babie's predicted weight is {{pred_wt}} kg.</h3>
         </form>
