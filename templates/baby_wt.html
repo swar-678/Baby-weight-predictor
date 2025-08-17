@@ -10,32 +10,32 @@
         }
 
         body {
-            font-family: Arial, sans-serif;
-            background: linear-gradient(to right, #74ebd5, #ACB6E5);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to right, #FFDEE9, #B5FFFC); /* soft pink to aqua gradient */
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
             margin: 0;
-            padding: 20px; /* extra padding to avoid top clipping */
+            padding: 20px;
         }
 
         .form-container {
-            background: #fff;
-            padding: 30px 40px;
-            border-radius: 15px;
-            box-shadow: 0px 8px 20px rgba(0,0,0,0.2);
+            background: #ffffffcc; /* slightly transparent white */
+            padding: 35px 45px;
+            border-radius: 20px;
+            box-shadow: 0px 10px 25px rgba(0,0,0,0.2);
             width: 100%;
-            max-width: 400px; /* slightly wider */
+            max-width: 400px;
             text-align: center;
-            overflow: auto; /* scroll if screen is small */
+            overflow: auto;
         }
 
         h1 {
             margin-top: 0;
-            margin-bottom: 20px;
-            color: #333;
-            font-size: 22px;
+            margin-bottom: 25px;
+            color: #FF5E5B; /* coral red */
+            font-size: 24px;
         }
 
         label {
@@ -43,6 +43,7 @@
             margin: 10px 0 5px;
             font-weight: bold;
             text-align: left;
+            color: #333;
         }
 
         input {
@@ -50,22 +51,22 @@
             padding: 10px;
             margin-bottom: 12px;
             border: 1px solid #ccc;
-            border-radius: 8px;
+            border-radius: 10px;
             outline: none;
             transition: 0.3s;
         }
 
         input:focus {
-            border-color: #74ebd5;
-            box-shadow: 0 0 8px rgba(116,235,213,0.5);
+            border-color: #FF5E5B;
+            box-shadow: 0 0 10px rgba(255,94,91,0.4);
         }
 
         button {
             width: 100%;
-            padding: 12px;
-            background: linear-gradient(to right, #74ebd5, #ACB6E5);
+            padding: 14px;
+            background: linear-gradient(to right, #FF5E5B, #FFA87D); /* coral to orange */
             border: none;
-            border-radius: 8px;
+            border-radius: 10px;
             color: #fff;
             font-size: 16px;
             font-weight: bold;
@@ -74,12 +75,12 @@
         }
 
         button:hover {
-            background: linear-gradient(to right, #57c6e1, #8e9efc);
+            background: linear-gradient(to right, #FF3B30, #FF9500); /* brighter on hover */
         }
 
         h3 {
             margin-top: 15px;
-            color: #333;
+            color: #FF5E5B;
         }
 
         @media (max-height: 600px) {
