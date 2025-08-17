@@ -18,7 +18,7 @@ def indata():
     data_df[['weight']]*=2.20462262
     print(data_df)
 
-    with open('model/model.pkl','rb') as f:
+    with open('model.pkl','rb') as f:
         mymodel=pickle.load(f)
 
     pred_wt=mymodel.predict(data_df)
